@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { getDataLauches, getLaunchByFlightNumer } from './services/launches'
+import { Routes, Route, useParams } from "react-router-dom";
+
+import { LaunchDetail } from "./components/LaunchDetail";
+import { LaunchList } from "./components/LaunchList";
+
 
 export const App = () => {
 
-    const [launches, setLaunches] = useState([])
-    useEffect(() => {
-        getDataLauches().then(setLaunches)
-    }, [])
-    console.log(launches);
-        
-    return (
-        <>
-        <h1>SpaceX Launches</h1>
-        <ul>
-            {launches.map(launch => (
-                <li key={launch.mission_id}>{launch.mission_name} ({launch.launch_year})</li>
-            ))}
-        </ul>
-        </>
-    )
-}
+  return (
+    <>
+      <img
+        src="https://1000marcas.net/wp-content/uploads/2020/11/SpaceX-Logo.png"
+        alt="logo spacex"
+        width="50%"
+        className="img_logo"
+      />
+      <Routes>
+        <Route path="/" element={<LaunchList />}/>
+        <Route path="launch/:launchId" element={<LaunchDetail />}/>
+      </Routes>
+
+    </>
+  );
+};
