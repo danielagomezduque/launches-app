@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/launches-app/static/css/main.a03d3668.css",
+    "main.js": "/launches-app/static/js/main.d61620ca.js",
+    "index.html": "/launches-app/index.html",
+    "main.a03d3668.css.map": "/launches-app/static/css/main.a03d3668.css.map",
+    "main.d61620ca.js.map": "/launches-app/static/js/main.d61620ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a03d3668.css",
+    "static/js/main.d61620ca.js"
+  ]
+}
